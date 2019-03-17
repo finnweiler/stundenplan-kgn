@@ -7,19 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6B06C662033783D004FE857 /* Untis+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B06C652033783D004FE857 /* Untis+Models.swift */; };
-		B6B06C6A20339961004FE857 /* Untis+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B06C6920339961004FE857 /* Untis+Requests.swift */; };
+		B6624DD72055D04800F636B8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D585722055CB3000BD06A8 /* NotificationCenter.framework */; };
+		B6624DDA2055D04800F636B8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6624DD92055D04800F636B8 /* TodayViewController.swift */; };
+		B6624DDD2055D04800F636B8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6624DDB2055D04800F636B8 /* MainInterface.storyboard */; };
+		B6624DE12055D04800F636B8 /* widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6624DD62055D04800F636B8 /* widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B6CC2AF6223817E200D2EC77 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC2AF5223817E200D2EC77 /* main.storyboard */; };
+		B6D0F92A22274F7A00B3C38A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F92922274F7A00B3C38A /* WelcomeController.swift */; };
+		B6D0F934222758BF00B3C38A /* UntisApi.h in Headers */ = {isa = PBXBuildFile; fileRef = B6D0F932222758BF00B3C38A /* UntisApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6D0F937222758BF00B3C38A /* UntisApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D0F930222758BF00B3C38A /* UntisApi.framework */; };
+		B6D0F938222758BF00B3C38A /* UntisApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6D0F930222758BF00B3C38A /* UntisApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6D0F93D222758DA00B3C38A /* Untis+Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B06C652033783D004FE857 /* Untis+Models.swift */; };
+		B6D0F93E222758DA00B3C38A /* Untis+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B06C6920339961004FE857 /* Untis+Requests.swift */; };
+		B6D0F93F222758DA00B3C38A /* Untis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE043D20334883009ABB82 /* Untis.swift */; };
+		B6D0F940222759C300B3C38A /* UntisApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D0F930222758BF00B3C38A /* UntisApi.framework */; };
 		B6EE0429203347AB009ABB82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE0428203347AB009ABB82 /* AppDelegate.swift */; };
 		B6EE042B203347AB009ABB82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE042A203347AB009ABB82 /* ViewController.swift */; };
 		B6EE0431203347AB009ABB82 /* timetable_iphone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6EE042F203347AB009ABB82 /* timetable_iphone.xcdatamodeld */; };
 		B6EE0433203347AB009ABB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EE0432203347AB009ABB82 /* Assets.xcassets */; };
 		B6EE0436203347AB009ABB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */; };
-		B6EE043E20334883009ABB82 /* Untis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE043D20334883009ABB82 /* Untis.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B6624DDF2055D04800F636B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6EE041D203347AB009ABB82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6624DD52055D04800F636B8;
+			remoteInfo = widget;
+		};
+		B6D0F935222758BF00B3C38A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6EE041D203347AB009ABB82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6D0F92F222758BF00B3C38A;
+			remoteInfo = UntisApi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6D0F93C222758BF00B3C38A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B6D0F938222758BF00B3C38A /* UntisApi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D585812055CB3100BD06A8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B6624DE12055D04800F636B8 /* widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B65FC4AF222761860002D6D0 /* timetable-iphone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "timetable-iphone.entitlements"; sourceTree = "<group>"; };
+		B65FC4B0222763C30002D6D0 /* widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widget.entitlements; sourceTree = "<group>"; };
+		B6624DD62055D04800F636B8 /* widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6624DD92055D04800F636B8 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B6624DDC2055D04800F636B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B6624DDE2055D04800F636B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6B06C652033783D004FE857 /* Untis+Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Untis+Models.swift"; sourceTree = "<group>"; };
 		B6B06C6920339961004FE857 /* Untis+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Untis+Requests.swift"; sourceTree = "<group>"; };
+		B6CC2AF5223817E200D2EC77 /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		B6D0F92922274F7A00B3C38A /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		B6D0F930222758BF00B3C38A /* UntisApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UntisApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D0F932222758BF00B3C38A /* UntisApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UntisApi.h; sourceTree = "<group>"; };
+		B6D0F933222758BF00B3C38A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D585722055CB3000BD06A8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B6EE0425203347AB009ABB82 /* timetable-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "timetable-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EE0428203347AB009ABB82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6EE042A203347AB009ABB82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,20 +95,71 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B6EE0422203347AB009ABB82 /* Frameworks */ = {
+		B6624DD32055D04800F636B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D0F940222759C300B3C38A /* UntisApi.framework in Frameworks */,
+				B6624DD72055D04800F636B8 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D0F92D222758BF00B3C38A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6EE0422203347AB009ABB82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D0F937222758BF00B3C38A /* UntisApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6624DD82055D04800F636B8 /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				B65FC4B0222763C30002D6D0 /* widget.entitlements */,
+				B6624DD92055D04800F636B8 /* TodayViewController.swift */,
+				B6624DDB2055D04800F636B8 /* MainInterface.storyboard */,
+				B6624DDE2055D04800F636B8 /* Info.plist */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
+		B6D0F931222758BF00B3C38A /* UntisApi */ = {
+			isa = PBXGroup;
+			children = (
+				B6EE043D20334883009ABB82 /* Untis.swift */,
+				B6B06C652033783D004FE857 /* Untis+Models.swift */,
+				B6B06C6920339961004FE857 /* Untis+Requests.swift */,
+				B6D0F932222758BF00B3C38A /* UntisApi.h */,
+				B6D0F933222758BF00B3C38A /* Info.plist */,
+			);
+			path = UntisApi;
+			sourceTree = "<group>";
+		};
+		B6D585712055CB3000BD06A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6D585722055CB3000BD06A8 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B6EE041C203347AB009ABB82 = {
 			isa = PBXGroup;
 			children = (
 				B6EE0427203347AB009ABB82 /* timetable-iphone */,
+				B6624DD82055D04800F636B8 /* widget */,
+				B6D0F931222758BF00B3C38A /* UntisApi */,
+				B6D585712055CB3000BD06A8 /* Frameworks */,
 				B6EE0426203347AB009ABB82 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				B6EE0425203347AB009ABB82 /* timetable-iphone.app */,
+				B6624DD62055D04800F636B8 /* widget.appex */,
+				B6D0F930222758BF00B3C38A /* UntisApi.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,9 +177,11 @@
 		B6EE0427203347AB009ABB82 /* timetable-iphone */ = {
 			isa = PBXGroup;
 			children = (
+				B65FC4AF222761860002D6D0 /* timetable-iphone.entitlements */,
 				B6EE0428203347AB009ABB82 /* AppDelegate.swift */,
 				B6EE042A203347AB009ABB82 /* ViewController.swift */,
-				B6EE043F2033488A009ABB82 /* UntisApi */,
+				B6D0F92922274F7A00B3C38A /* WelcomeController.swift */,
+				B6CC2AF5223817E200D2EC77 /* main.storyboard */,
 				B6EE0432203347AB009ABB82 /* Assets.xcassets */,
 				B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */,
 				B6EE0437203347AB009ABB82 /* Info.plist */,
@@ -71,19 +190,55 @@
 			path = "timetable-iphone";
 			sourceTree = "<group>";
 		};
-		B6EE043F2033488A009ABB82 /* UntisApi */ = {
-			isa = PBXGroup;
-			children = (
-				B6EE043D20334883009ABB82 /* Untis.swift */,
-				B6B06C652033783D004FE857 /* Untis+Models.swift */,
-				B6B06C6920339961004FE857 /* Untis+Requests.swift */,
-			);
-			path = UntisApi;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B6D0F92B222758BF00B3C38A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D0F934222758BF00B3C38A /* UntisApi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		B6624DD52055D04800F636B8 /* widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6624DE22055D04800F636B8 /* Build configuration list for PBXNativeTarget "widget" */;
+			buildPhases = (
+				B6624DD22055D04800F636B8 /* Sources */,
+				B6624DD32055D04800F636B8 /* Frameworks */,
+				B6624DD42055D04800F636B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = widget;
+			productName = widget;
+			productReference = B6624DD62055D04800F636B8 /* widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		B6D0F92F222758BF00B3C38A /* UntisApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6D0F939222758BF00B3C38A /* Build configuration list for PBXNativeTarget "UntisApi" */;
+			buildPhases = (
+				B6D0F92B222758BF00B3C38A /* Headers */,
+				B6D0F92C222758BF00B3C38A /* Sources */,
+				B6D0F92D222758BF00B3C38A /* Frameworks */,
+				B6D0F92E222758BF00B3C38A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UntisApi;
+			productName = UntisApi;
+			productReference = B6D0F930222758BF00B3C38A /* UntisApi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		B6EE0424203347AB009ABB82 /* timetable-iphone */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6EE043A203347AB009ABB82 /* Build configuration list for PBXNativeTarget "timetable-iphone" */;
@@ -91,10 +246,14 @@
 				B6EE0421203347AB009ABB82 /* Sources */,
 				B6EE0422203347AB009ABB82 /* Frameworks */,
 				B6EE0423203347AB009ABB82 /* Resources */,
+				B6D585812055CB3100BD06A8 /* Embed App Extensions */,
+				B6D0F93C222758BF00B3C38A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B6624DE02055D04800F636B8 /* PBXTargetDependency */,
+				B6D0F936222758BF00B3C38A /* PBXTargetDependency */,
 			);
 			name = "timetable-iphone";
 			productName = "timetable-iphone";
@@ -108,12 +267,32 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Finn Weiler";
 				TargetAttributes = {
+					B6624DD52055D04800F636B8 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					B6D0F92F222758BF00B3C38A = {
+						CreatedOnToolsVersion = 10.1;
+						ProvisioningStyle = Automatic;
+					};
 					B6EE0424203347AB009ABB82 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -131,39 +310,94 @@
 			projectRoot = "";
 			targets = (
 				B6EE0424203347AB009ABB82 /* timetable-iphone */,
+				B6624DD52055D04800F636B8 /* widget */,
+				B6D0F92F222758BF00B3C38A /* UntisApi */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B6624DD42055D04800F636B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6624DDD2055D04800F636B8 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D0F92E222758BF00B3C38A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6EE0423203347AB009ABB82 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B6EE0436203347AB009ABB82 /* LaunchScreen.storyboard in Resources */,
 				B6EE0433203347AB009ABB82 /* Assets.xcassets in Resources */,
+				B6CC2AF6223817E200D2EC77 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B6624DD22055D04800F636B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6624DDA2055D04800F636B8 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6D0F92C222758BF00B3C38A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D0F93F222758DA00B3C38A /* Untis.swift in Sources */,
+				B6D0F93D222758DA00B3C38A /* Untis+Models.swift in Sources */,
+				B6D0F93E222758DA00B3C38A /* Untis+Requests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6EE0421203347AB009ABB82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B6EE0431203347AB009ABB82 /* timetable_iphone.xcdatamodeld in Sources */,
 				B6EE042B203347AB009ABB82 /* ViewController.swift in Sources */,
-				B6EE043E20334883009ABB82 /* Untis.swift in Sources */,
-				B6B06C6A20339961004FE857 /* Untis+Requests.swift in Sources */,
+				B6D0F92A22274F7A00B3C38A /* WelcomeController.swift in Sources */,
 				B6EE0429203347AB009ABB82 /* AppDelegate.swift in Sources */,
-				B6B06C662033783D004FE857 /* Untis+Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B6624DE02055D04800F636B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6624DD52055D04800F636B8 /* widget */;
+			targetProxy = B6624DDF2055D04800F636B8 /* PBXContainerItemProxy */;
+		};
+		B6D0F936222758BF00B3C38A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6D0F92F222758BF00B3C38A /* UntisApi */;
+			targetProxy = B6D0F935222758BF00B3C38A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		B6624DDB2055D04800F636B8 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6624DDC2055D04800F636B8 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -175,6 +409,101 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B6624DE32055D04800F636B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DTU24ZP7EY;
+				INFOPLIST_FILE = widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B6624DE42055D04800F636B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DTU24ZP7EY;
+				INFOPLIST_FILE = widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		B6D0F93A222758BF00B3C38A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DTU24ZP7EY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UntisApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnweiler.UntisApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6D0F93B222758BF00B3C38A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DTU24ZP7EY;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UntisApi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.finnweiler.UntisApi;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B6EE0438203347AB009ABB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -189,6 +518,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -196,6 +526,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -246,6 +577,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -253,6 +585,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -285,36 +618,60 @@
 		B6EE043B203347AB009ABB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "timetable-iphone/timetable-iphone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76K3PBCK69;
+				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = "timetable-iphone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.weilerapps.timetable-iphone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B6EE043C203347AB009ABB82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "timetable-iphone/timetable-iphone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76K3PBCK69;
+				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = "timetable-iphone/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.weilerapps.timetable-iphone";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B6624DE22055D04800F636B8 /* Build configuration list for PBXNativeTarget "widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6624DE32055D04800F636B8 /* Debug */,
+				B6624DE42055D04800F636B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6D0F939222758BF00B3C38A /* Build configuration list for PBXNativeTarget "UntisApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6D0F93A222758BF00B3C38A /* Debug */,
+				B6D0F93B222758BF00B3C38A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B6EE0420203347AB009ABB82 /* Build configuration list for PBXProject "timetable-iphone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
