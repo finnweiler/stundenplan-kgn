@@ -118,9 +118,9 @@ public class Untis {
                                                       URLQueryItem(name: "formatId", value: "2")]), completion: { (data) in
             
                                                         let decoder = JSONDecoder()
-                                                        let rawResponse = try! decoder.decode(CustomResponse.self, from: data)
+                                                        let rawResponse = try? decoder.decode(CustomResponse.self, from: data)
                                                         
-                                                        completion(rawResponse.data.result.data)
+                                                        completion(rawResponse?.data.result.data)
         }, error: { (error, _) in
             completion(nil)
         })

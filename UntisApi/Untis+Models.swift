@@ -101,6 +101,10 @@ extension Untis {
             public var room: Element?
             public var course: Element?
             
+            
+            public var startTimeMinutes: Int { return convertAPITime(t: startTime) }
+            public var endTimeMinutes: Int { return convertAPITime(t: endTime) }
+            
             public class ElementRef: Decodable {
                 public let id: Int
                 public let type: Int
@@ -128,7 +132,7 @@ extension Untis {
                             return NSAttributedString(string: "\(name)(err)")
                         }
                     case "EXAM": return NSAttributedString(string: "\(name)", attributes: [
-                        NSAttributedString.Key.foregroundColor : UIColor.green,
+                        NSAttributedString.Key.foregroundColor : UIColor(red: 0, green: 155/255, blue: 36/255, alpha: 1)
                         ])
                     default: return NSAttributedString(string: "\(name)", attributes: [
                         NSAttributedString.Key.foregroundColor : UIColor.red,
@@ -137,6 +141,15 @@ extension Untis {
                 } else {
                     return NSAttributedString(string: "Err")
                 }
+            }
+            
+            private func convertAPITime(t: Int) -> Int {
+                var timeStr = "\(t)"
+                if (timeStr.count == 3) { timeStr = "0\(timeStr)" }
+                let hours = timeStr.prefix(2)
+                let minutes = timeStr.suffix(2)
+                let minutesTotal = Int(hours)! * 60 + Int(minutes)!
+                return minutesTotal
             }
         }
         

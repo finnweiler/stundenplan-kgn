@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SettingsController.swift
 //  timetable-iphone
 //
 //  Created by Finn Weiler on 13.02.18.
@@ -9,68 +9,59 @@
 import UIKit
 import UntisApi
 
-class ViewController: UITableViewController {
-    
-    var username = Untis.username
-    var password = Untis.password
-    
-    var configured = UserDefaults.standard.bool(forKey: "configured")
+class SettingsController: UITableViewController {
     
     var selectedElements: Array<Untis.TimetableResponse.Element> = []
     var availableElements: Array<Untis.TimetableResponse.Element> = []
     
+    init() {
+        super.init(style: .grouped)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Einstellungen"
+        tableView.allowsSelectionDuringEditing = true
         
-        let button = UIButton(type: .infoLight)
-        button.addTarget(self, action: #selector(showHelp), for: .touchUpInside)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+        navigationItem.title = "Kurse"
+        navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(startEdit)), animated: false)
+        navigationController?.navigationBar.tintColor = .black
         
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(checkUntis), for: .valueChanged)
-        
-        if (!configured) {
-            let storyboard = UIStoryboard(name: "main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "welcomeController")
-            self.present(vc, animated: false, completion: nil)
-        }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (configured) {
             checkUntis()
             tableView.refreshControl?.beginRefreshing()
             let offsetPoint = CGPoint(x: 0, y: -100)
             tableView.setContentOffset(offsetPoint, animated: true)
-        }
-        
-        tableView.setEditing(true, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0: return "Untis-Zugangsdaten"
-        case 1: return "Ausgewählte Fächer"
-        case 2: return "Gefundene Fächer"
-        case 3: return "Einstellungen"
+        case 0: return "Sichtbar (\(selectedElements.count))"
+        case 1: return "Verborgen (\(availableElements.count))"
+        case 2: return "Einstellungen"
         default: return ""
         }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return !configured ? 1 : 4
+        return tableView.isEditing ? 2 : 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return 2
-        case 1: return selectedElements.count
-        case 2: return availableElements.count
-        case 3: return 1
+        case 0: return selectedElements.count
+        case 1: return availableElements.count
+        case 2: return 1
         default: return 0
         }
     }
@@ -79,30 +70,26 @@ class ViewController: UITableViewController {
         let cellId = "cellId"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) ?? UITableViewCell(style: .value1, reuseIdentifier: cellId)
         if (indexPath.section == 0) {
-            if (indexPath.item == 0) {
-                cell.textLabel?.text = "Nutzername"
-                cell.detailTextLabel?.text = username
-            } else {
-                cell.textLabel?.text = "Passwort"
-                cell.detailTextLabel?.text = String(self.password.map({ (c) -> Character in return "*" }))
-            }
-        } else if (indexPath.section == 1) {
             cell.textLabel?.text = selectedElements[indexPath.item].longName
             cell.detailTextLabel?.text = selectedElements[indexPath.item].name
-        } else if (indexPath.section == 2) {
+        } else if (indexPath.section == 1) {
             cell.textLabel?.text = availableElements[indexPath.item].longName
             cell.detailTextLabel?.text = availableElements[indexPath.item].name
-        } else if (indexPath.section == 3) {
+        } else if (indexPath.section == 2) {
             cell.textLabel?.text = "Zurücksetzen"
             cell.detailTextLabel?.text = ""
         }
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return tableView.isEditing || indexPath.section == 2
+    }
+    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        if (indexPath.section == 1) {
+        if (indexPath.section == 0) {
             return UITableViewCell.EditingStyle.delete
-        } else if (indexPath.section == 2) {
+        } else if (indexPath.section == 1) {
             return UITableViewCell.EditingStyle.insert
         } else {
             return UITableViewCell.EditingStyle.none
@@ -110,41 +97,37 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if (indexPath.section == 0 && !configured) {
-            if (indexPath.item == 0) {
-                setProperty(title: "Nutzername") { (username) in
-                    self.username = username
-                    self.tableView.reloadRows(at: [IndexPath(item: 0, section: 0)], with: .automatic)
-                    Untis.setUserCredentials(username: self.username, password: self.password)
-                }
-            } else {
-                setProperty(title: "Passwort") { (password) in
-                    self.password = password
-                    self.tableView.reloadRows(at: [IndexPath(item: 1, section: 0)], with: .automatic)
-                    Untis.setUserCredentials(username: self.username, password: self.password)
-                    if (self.username != "" && self.password != "") {
-                        tableView.refreshControl?.beginRefreshing()
-                        self.checkUntis()
-                        let offsetPoint = CGPoint(x: 0, y: -100)
-                        tableView.setContentOffset(offsetPoint, animated: true)
-                    }
-                }
-            }
-        } else if (indexPath.section == 1) {
+        if (indexPath.section == 0 && tableView.isEditing) {
             let element = self.selectedElements.remove(at: indexPath.item)
+            availableElements.append(element)
             Untis.removeElement(id: element.id)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        } else if (indexPath.section == 2) {
+            tableView.performBatchUpdates({
+                tableView.insertRows(at: [IndexPath(item: availableElements.count-1, section: 1)], with: .automatic)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }, completion: { _ in
+                tableView.reloadSectionIndexTitles()
+            })
+        } else if (indexPath.section == 1 && tableView.isEditing) {
             let element = self.availableElements.remove(at: indexPath.item)
             selectedElements.append(element)
             Untis.addElement(id: element.id)
             tableView.performBatchUpdates({
-                tableView.insertRows(at: [IndexPath(item: selectedElements.count-1, section: 1)], with: .automatic)
+                tableView.insertRows(at: [IndexPath(item: selectedElements.count-1, section: 0)], with: .automatic)
                 tableView.deleteRows(at: [indexPath], with: .automatic)
-            }, completion: nil)
-        } else if (indexPath.section == 3) {
+            }, completion: { _ in
+                tableView.reloadSectionIndexTitles()
+            })
+        } else if (indexPath.section == 2) {
             reset()
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        return nil
+    }
+    
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return false
     }
     
     func setProperty(title: String, finish: @escaping (_ value: String) -> Void) {
@@ -163,11 +146,9 @@ class ViewController: UITableViewController {
     @objc func checkUntis() {
         Untis.auth { (success) in
             if (success) {
-                self.configured = true
                 self.getCourses()
-                UserDefaults.standard.set(true, forKey: "configured")
             } else {
-                let alert = UIAlertController(title: "Fehler!", message: "Der Login mit deinen Zugansdaten war nicht erfolgreich. Versuche es später erneut und überprüfe ggf. deine Zugansdaten!", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Fehler!", message: "Der Login mit deinen Zugansdaten war nicht erfolgreich. Versuche es später erneut oder setze ggf. die App zurück!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Verstanden", style: .cancel, handler: { _ in
                     self.refreshControl?.endRefreshing()
                 }))
@@ -185,6 +166,8 @@ class ViewController: UITableViewController {
             self.selectedElements = tempDic.map({ (arg0) -> Untis.TimetableResponse.Element in
                 let (_, value) = arg0
                 return value
+            }).sorted(by: { (elA, elB) -> Bool in
+                return elA.longName < elB.longName
             })
             self.availableElements = timetable.elements.filter({ (element) -> Bool in
                 return element.type == 3 && tempDic[element.id] == nil
@@ -200,13 +183,12 @@ class ViewController: UITableViewController {
         let alert = UIAlertController(title: "Zurücksetzen", message: "Deine Untis-Zugansdaten und gespeicherten Kurse werden dauerhaft gelöscht.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Zurücksetzen", style: .destructive, handler: { _ in
             Untis.reset()
-            self.username = ""
-            self.password = ""
             self.selectedElements = []
             self.availableElements = []
-            self.configured = false
-            UserDefaults.standard.set(false, forKey: "configured")
             self.tableView.reloadData()
+            UserDefaults.standard.set(false, forKey: "configured")
+            self.navigationController?.popViewController(animated: false)
+            (self.navigationController?.viewControllers.first as? HomeController)?.showWelcome()
         }))
         alert.addAction(UIAlertAction(title: "Abbrechen", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -220,6 +202,18 @@ class ViewController: UITableViewController {
             UIApplication.shared.open(url)
         }))
         present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func startEdit() {
+        tableView.setEditing(true, animated: true)
+        navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(endEdit)), animated: true)
+        tableView.deleteSections([2], with: .automatic)
+    }
+    
+    @objc func endEdit() {
+        tableView.setEditing(false, animated: true)
+        navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(startEdit)), animated: true)
+        tableView.insertSections([2], with: .automatic)
     }
 }
 

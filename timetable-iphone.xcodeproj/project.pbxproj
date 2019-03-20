@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B65E25AF223E93D600D1A335 /* PlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E25AE223E93D600D1A335 /* PlanController.swift */; };
+		B65E25B1223F045900D1A335 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65E25B0223F045900D1A335 /* HomeController.swift */; };
 		B6624DD72055D04800F636B8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D585722055CB3000BD06A8 /* NotificationCenter.framework */; };
 		B6624DDA2055D04800F636B8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6624DD92055D04800F636B8 /* TodayViewController.swift */; };
 		B6624DDD2055D04800F636B8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6624DDB2055D04800F636B8 /* MainInterface.storyboard */; };
@@ -21,7 +23,7 @@
 		B6D0F93F222758DA00B3C38A /* Untis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE043D20334883009ABB82 /* Untis.swift */; };
 		B6D0F940222759C300B3C38A /* UntisApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D0F930222758BF00B3C38A /* UntisApi.framework */; };
 		B6EE0429203347AB009ABB82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE0428203347AB009ABB82 /* AppDelegate.swift */; };
-		B6EE042B203347AB009ABB82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE042A203347AB009ABB82 /* ViewController.swift */; };
+		B6EE042B203347AB009ABB82 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE042A203347AB009ABB82 /* SettingsController.swift */; };
 		B6EE0431203347AB009ABB82 /* timetable_iphone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6EE042F203347AB009ABB82 /* timetable_iphone.xcdatamodeld */; };
 		B6EE0433203347AB009ABB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EE0432203347AB009ABB82 /* Assets.xcassets */; };
 		B6EE0436203347AB009ABB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */; };
@@ -70,6 +72,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B65E25AE223E93D600D1A335 /* PlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanController.swift; sourceTree = "<group>"; };
+		B65E25B0223F045900D1A335 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		B65FC4AF222761860002D6D0 /* timetable-iphone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "timetable-iphone.entitlements"; sourceTree = "<group>"; };
 		B65FC4B0222763C30002D6D0 /* widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widget.entitlements; sourceTree = "<group>"; };
 		B6624DD62055D04800F636B8 /* widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +90,7 @@
 		B6D585722055CB3000BD06A8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B6EE0425203347AB009ABB82 /* timetable-iphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "timetable-iphone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EE0428203347AB009ABB82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6EE042A203347AB009ABB82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B6EE042A203347AB009ABB82 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		B6EE0430203347AB009ABB82 /* timetable_iphone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = timetable_iphone.xcdatamodel; sourceTree = "<group>"; };
 		B6EE0432203347AB009ABB82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6EE0435203347AB009ABB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,8 +183,10 @@
 			children = (
 				B65FC4AF222761860002D6D0 /* timetable-iphone.entitlements */,
 				B6EE0428203347AB009ABB82 /* AppDelegate.swift */,
-				B6EE042A203347AB009ABB82 /* ViewController.swift */,
 				B6D0F92922274F7A00B3C38A /* WelcomeController.swift */,
+				B65E25B0223F045900D1A335 /* HomeController.swift */,
+				B65E25AE223E93D600D1A335 /* PlanController.swift */,
+				B6EE042A203347AB009ABB82 /* SettingsController.swift */,
 				B6CC2AF5223817E200D2EC77 /* main.storyboard */,
 				B6EE0432203347AB009ABB82 /* Assets.xcassets */,
 				B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */,
@@ -368,9 +374,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6EE0431203347AB009ABB82 /* timetable_iphone.xcdatamodeld in Sources */,
-				B6EE042B203347AB009ABB82 /* ViewController.swift in Sources */,
+				B6EE042B203347AB009ABB82 /* SettingsController.swift in Sources */,
+				B65E25B1223F045900D1A335 /* HomeController.swift in Sources */,
 				B6D0F92A22274F7A00B3C38A /* WelcomeController.swift in Sources */,
 				B6EE0429203347AB009ABB82 /* AppDelegate.swift in Sources */,
+				B65E25AF223E93D600D1A335 /* PlanController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: ViewController(style: .grouped))
+        window?.rootViewController = UINavigationController(rootViewController: HomeController())
         window?.makeKeyAndVisible()
         
         return true
@@ -36,6 +36,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        let defaults = UserDefaults.standard
+        if let lastFetch = defaults.value(forKey: "lastFetchBG") as? TimeInterval {
+            if Date().timeIntervalSince1970 - lastFetch > 60 * 5 {
+                if let vc = (window?.rootViewController as? UINavigationController)?.viewControllers.first as? HomeController { vc.refreshPlans() }
+            }
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
