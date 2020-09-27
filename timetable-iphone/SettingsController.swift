@@ -29,7 +29,11 @@ class SettingsController: UITableViewController {
         
         navigationItem.title = "Kurse"
         navigationItem.setRightBarButton(UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(startEdit)), animated: false)
-        navigationController?.navigationBar.tintColor = .black
+        if #available(iOS 13.0, *) {
+            navigationController?.navigationBar.tintColor = UIColor.label
+        } else {
+            navigationController?.navigationBar.tintColor = .black
+        }
         
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(checkUntis), for: .valueChanged)
@@ -120,6 +124,10 @@ class SettingsController: UITableViewController {
         } else if (indexPath.section == 2) {
             reset()
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        self.tableView(tableView, didSelectRowAt: indexPath)
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

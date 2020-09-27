@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import SwiftUI
 
 extension Untis {
     
@@ -118,6 +118,9 @@ extension Untis {
             }
             
             public func displayableString() -> NSAttributedString {
+                let defaults = UserDefaults(suiteName: "group.com.finnweiler.shared")
+                let cancelRgb = defaults?.integer(forKey: "colorCancel") ?? 0xFF0000
+                let examRgb = defaults?.integer(forKey: "colorExam") ?? 0x00FF00
                 if let name = course?.name.split(separator: " ").first {
                     switch cellState {
                     case "STANDARD": return NSAttributedString(string: "\(name)")
@@ -125,21 +128,46 @@ extension Untis {
                         if let displayRoom = room?.displayname.split(separator: " ").first {
                             let str = NSMutableAttributedString()
                             str.append(NSAttributedString(string: "\(name)("))
-                            str.append(NSAttributedString(string: "\(displayRoom)", attributes: [NSAttributedString.Key.foregroundColor : UIColor.red]))
+                            str.append(NSAttributedString(string: "\(displayRoom)", attributes: [NSAttributedString.Key.foregroundColor : UIColor(rgb: cancelRgb)]))
                             str.append(NSAttributedString(string: ")"))
                             return str
                         } else {
                             return NSAttributedString(string: "\(name)(err)")
                         }
                     case "EXAM": return NSAttributedString(string: "\(name)", attributes: [
-                        NSAttributedString.Key.foregroundColor : UIColor(red: 0, green: 155/255, blue: 36/255, alpha: 1)
+                        NSAttributedString.Key.foregroundColor : UIColor(rgb: examRgb)//UIColor(red: 0, green: 155/255, blue: 36/255, alpha: 1)
                         ])
                     default: return NSAttributedString(string: "\(name)", attributes: [
-                        NSAttributedString.Key.foregroundColor : UIColor.red,
+                        NSAttributedString.Key.foregroundColor : UIColor(rgb: cancelRgb),
                         ])
                     }
                 } else {
                     return NSAttributedString(string: "Err")
+                }
+            }
+            
+            @available(iOSApplicationExtension 14.0, *)
+            public func displayableLesson() -> Lesson {
+                let defaults = UserDefaults(suiteName: "group.com.finnweiler.shared")
+                let cancelRgb = defaults?.integer(forKey: "colorCancel") ?? 0xFF0000
+                let examRgb = defaults?.integer(forKey: "colorExam") ?? 0x00FF00
+                if let name = course?.name.split(separator: " ").first {
+                    switch cellState {
+                    case "STANDARD":
+                        return Lesson(text: String(name), color: Color(UIColor.label), room: nil)
+                    case "ROOMSUBSTITUTION":
+                        if let displayRoom = room?.displayname.split(separator: " ").first {
+                            return Lesson(text: String(name), color: Color(rgb: cancelRgb), room: String(displayRoom))
+                        } else {
+                            return Lesson(text: String(name), color: .yellow, room: "err")
+                        }
+                    case "EXAM":
+                        return Lesson(text: String(name), color: Color(rgb: examRgb), room: nil)
+                    default:
+                        return Lesson(text: String(name), color: Color(rgb: cancelRgb), room: nil)
+                    }
+                } else {
+                    return Lesson(text: "err", color: .yellow, room: nil)
                 }
             }
             
@@ -168,5 +196,72 @@ extension Untis {
                 self.displayname = displayname
             }
         }
+    }
+}
+
+extension UIColor {
+    private convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1)
+    }
+    
+    convenience init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+}
+
+@available(iOSApplicationExtension 14.0, *)
+extension Color {
+    
+    private init(red: Int, green: Int, blue: Int) {
+           assert(red >= 0 && red <= 255, "Invalid red component")
+           assert(green >= 0 && green <= 255, "Invalid green component")
+           assert(blue >= 0 && blue <= 255, "Invalid blue component")
+
+           self.init(red: Double(red) / 255.0, green: Double(green) / 255.0, blue: Double(blue) / 255.0)
+    }
+    
+    init(rgb: Int) {
+        self.init(
+            red: (rgb >> 16) & 0xFF,
+            green: (rgb >> 8) & 0xFF,
+            blue: rgb & 0xFF
+        )
+    }
+    
+    var rgb: Int {
+        let rgb =
+            (Int(self.components.red * 255.0) << 16) +
+            (Int(self.components.green * 255.0) << 8) +
+            (Int(self.components.blue * 255.0))
+        return rgb
+    }
+    
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, opacity: CGFloat) {
+
+        #if canImport(UIKit)
+        typealias NativeColor = UIColor
+        #elseif canImport(AppKit)
+        typealias NativeColor = NSColor
+        #endif
+
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var o: CGFloat = 0
+
+        guard NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o) else {
+            // You can handle the failure here as you want
+            return (0, 0, 0, 0)
+        }
+
+        return (r, g, b, o)
     }
 }

@@ -7,7 +7,21 @@
 //
 
 import Foundation
+import SwiftUI
 
+@available(iOSApplicationExtension 13.0, *)
+public struct Lesson: Hashable {
+    public let id = UUID()
+    public let text: String
+    public let color: Color
+    public let room: String?
+    
+    public init(text: String, color: Color, room: String?) {
+        self.text = text
+        self.color = color
+        self.room = room
+    }
+}
 
 public class Untis {
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 class HomeController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, PlanControllerDelegate {
@@ -31,13 +32,24 @@ class HomeController: UIPageViewController, UIPageViewControllerDataSource, UIPa
         
         navigationItem.title = "Stundenplan"
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "more"), style: .plain, target: self, action: #selector(showSettings))
-        navigationItem.leftBarButtonItem?.tintColor = .black
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: indicator)
-        indicator.startAnimating()
+        if #available(iOS 14.0, *) {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "paint-palette"), style: .plain, target: self, action: #selector(showCustomize))
+        } else {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(customView: indicator)
+            indicator.startAnimating()
+        }
         
+        if #available(iOS 13.0, *) {
+            navigationItem.leftBarButtonItem?.tintColor = UIColor.label
+            navigationItem.rightBarButtonItem?.tintColor = UIColor.label
+        } else {
+            navigationItem.leftBarButtonItem?.tintColor = .black
+            navigationItem.rightBarButtonItem?.tintColor = .black
+        }
         
-        view.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 244/255, alpha: 1)
+        view.backgroundColor = UIColor(named: "background")
+            //UIColor(red: 239/255, green: 239/255, blue: 244/255, alpha: 1)
         
         self.dataSource = self
         self.delegate = self
@@ -80,9 +92,20 @@ class HomeController: UIPageViewController, UIPageViewControllerDataSource, UIPa
         navigationController?.pushViewController(settings, animated: true)
     }
     
+    
+    @available(iOS 14.0, *)
+    @objc func showCustomize() {
+        let controller = UIHostingController(rootView: CustomizeView())
+        navigationController?.navigationBar.tintColor = UIColor.label
+        controller.navigationItem.title = "Farbeinstellungen"
+        controller.view.backgroundColor = UIColor(named: "background")
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     func showWelcome() {
         let storyboard = UIStoryboard(name: "main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "welcomeController")
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
     }
     

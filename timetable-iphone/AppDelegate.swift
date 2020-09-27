@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import WidgetKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        if let defaults = UserDefaults(suiteName: "group.com.finnweiler.shared") {
+            let version = defaults.string(forKey: "appVersion")
+            if version != "2.0" {
+                defaults.setValue("2.0", forKey: "appVersion")
+                defaults.setValue(0x080808, forKey: "colorDarkBg")
+                defaults.setValue(0xFEFEFE, forKey: "colorLightBg")
+                defaults.setValue(16660268, forKey: "colorCancel")
+                defaults.setValue(7387961, forKey: "colorExam")
+                defaults.synchronize()
+            }
+        }
+        
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: HomeController())
@@ -32,6 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        if #available(iOS 14.0, *) {
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

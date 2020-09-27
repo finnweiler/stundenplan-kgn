@@ -65,4 +65,9 @@ class WelcomeController: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        usernameField.endEditing(true)
+        passwordField.endEditing(true)
+    }
 }
