@@ -8,7 +8,7 @@
 
 import UIKit
 import UntisApi
-
+import FirebaseAnalytics
 
 class WelcomeController: UIViewController {
     
@@ -42,6 +42,9 @@ class WelcomeController: UIViewController {
             if (success) {
                 UserDefaults.standard.set(true, forKey: "configured")
                 self.dismiss(animated: true, completion: nil)
+                Analytics.logEvent(AnalyticsEventLogin, parameters: [
+                    AnalyticsParameterMethod: "login"
+                ])
             } else {
                 self.errorLabel.isHidden = false
                 self.usernameField.isUserInteractionEnabled = true
@@ -49,6 +52,12 @@ class WelcomeController: UIViewController {
                 self.loadingIndicator.stopAnimating()
                 self.submitButton.isEnabled = true
             }
+        }
+    }
+    
+    @IBAction func openPrivacy(_ sender: UIButton) {
+        if let url = URL(string: "https://finnweiler.com/apps/privacy/stundenplankgn.html") {
+            UIApplication.shared.open(url)
         }
     }
     

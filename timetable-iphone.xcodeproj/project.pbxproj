@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412E017CBF58AED7DDDFC173 /* Pods_UntisApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE14F74C382037DE2584D27 /* Pods_UntisApi.framework */; };
+		A31757412521E94A00C83611 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31757402521E94A00C83611 /* GoogleService-Info.plist */; };
 		A33283E7251EB64A00687C7A /* UntisApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D0F930222758BF00B3C38A /* UntisApi.framework */; };
 		A3623C07251FAE7B000F15D8 /* CustomizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3623C06251FAE7B000F15D8 /* CustomizeView.swift */; };
 		A3E2EAA1251E63C800A4FF4C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E2EAA0251E63C800A4FF4C /* WidgetKit.framework */; };
@@ -22,6 +24,7 @@
 		B6624DDA2055D04800F636B8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6624DD92055D04800F636B8 /* TodayViewController.swift */; };
 		B6624DDD2055D04800F636B8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6624DDB2055D04800F636B8 /* MainInterface.storyboard */; };
 		B6624DE12055D04800F636B8 /* widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B6624DD62055D04800F636B8 /* widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B690BC8980E9FE4547F43885 /* Pods_widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CC308B00DBB7CA5DC03092 /* Pods_widget.framework */; };
 		B6CC2AF6223817E200D2EC77 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6CC2AF5223817E200D2EC77 /* main.storyboard */; };
 		B6D0F92A22274F7A00B3C38A /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D0F92922274F7A00B3C38A /* WelcomeController.swift */; };
 		B6D0F934222758BF00B3C38A /* UntisApi.h in Headers */ = {isa = PBXBuildFile; fileRef = B6D0F932222758BF00B3C38A /* UntisApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +39,8 @@
 		B6EE0431203347AB009ABB82 /* timetable_iphone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6EE042F203347AB009ABB82 /* timetable_iphone.xcdatamodeld */; };
 		B6EE0433203347AB009ABB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EE0432203347AB009ABB82 /* Assets.xcassets */; };
 		B6EE0436203347AB009ABB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */; };
+		C08904202EC7B7E13F172101 /* Pods_timetable_iphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC06236FFB67177FC5E34938 /* Pods_timetable_iphone.framework */; };
+		E516DB511D99DEA709AF16A3 /* Pods_widget14Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E143AA36F4DBD914CE2A32D4 /* Pods_widget14Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +101,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		342B26762B1D123E0BB164BE /* Pods-widget14Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widget14Extension.release.xcconfig"; path = "Target Support Files/Pods-widget14Extension/Pods-widget14Extension.release.xcconfig"; sourceTree = "<group>"; };
+		45C54EB3B99634ABD9BEA41A /* Pods-timetable-iphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timetable-iphone.debug.xcconfig"; path = "Target Support Files/Pods-timetable-iphone/Pods-timetable-iphone.debug.xcconfig"; sourceTree = "<group>"; };
+		58CC308B00DBB7CA5DC03092 /* Pods_widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73127D2B5B80877181DE0F6B /* Pods-UntisApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UntisApi.debug.xcconfig"; path = "Target Support Files/Pods-UntisApi/Pods-UntisApi.debug.xcconfig"; sourceTree = "<group>"; };
+		881C4B848A7EB8F9F5723886 /* Pods-timetable-iphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timetable-iphone.release.xcconfig"; path = "Target Support Files/Pods-timetable-iphone/Pods-timetable-iphone.release.xcconfig"; sourceTree = "<group>"; };
+		8D9EEC84AFDA2CE43D3874CB /* Pods-widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widget.release.xcconfig"; path = "Target Support Files/Pods-widget/Pods-widget.release.xcconfig"; sourceTree = "<group>"; };
+		8EE14F74C382037DE2584D27 /* Pods_UntisApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UntisApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C176175F6500E4F741C5A9E /* Pods-UntisApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UntisApi.release.xcconfig"; path = "Target Support Files/Pods-UntisApi/Pods-UntisApi.release.xcconfig"; sourceTree = "<group>"; };
+		A31757402521E94A00C83611 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3623C06251FAE7B000F15D8 /* CustomizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeView.swift; sourceTree = "<group>"; };
 		A3E2EA9F251E63C800A4FF4C /* widget14Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widget14Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E2EAA0251E63C800A4FF4C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +119,8 @@
 		A3E2EAA8251E63CA00A4FF4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3E2EAAA251E63CA00A4FF4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3E2EABC251E654300A4FF4C /* widget14Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widget14Extension.entitlements; sourceTree = "<group>"; };
+		AFD1798C16D5AE0442685434 /* Pods-widget14Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widget14Extension.debug.xcconfig"; path = "Target Support Files/Pods-widget14Extension/Pods-widget14Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		B5641A37EEC2521CEA9312CC /* Pods-widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-widget.debug.xcconfig"; path = "Target Support Files/Pods-widget/Pods-widget.debug.xcconfig"; sourceTree = "<group>"; };
 		B65E25AE223E93D600D1A335 /* PlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanController.swift; sourceTree = "<group>"; };
 		B65E25B0223F045900D1A335 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		B65FC4AF222761860002D6D0 /* timetable-iphone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "timetable-iphone.entitlements"; sourceTree = "<group>"; };
@@ -129,6 +145,8 @@
 		B6EE0435203347AB009ABB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6EE0437203347AB009ABB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6EE043D20334883009ABB82 /* Untis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Untis.swift; sourceTree = "<group>"; };
+		E143AA36F4DBD914CE2A32D4 /* Pods_widget14Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_widget14Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC06236FFB67177FC5E34938 /* Pods_timetable_iphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timetable_iphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +157,7 @@
 				A3E2EAA3251E63C800A4FF4C /* SwiftUI.framework in Frameworks */,
 				A3E2EAA1251E63C800A4FF4C /* WidgetKit.framework in Frameworks */,
 				A33283E7251EB64A00687C7A /* UntisApi.framework in Frameworks */,
+				E516DB511D99DEA709AF16A3 /* Pods_widget14Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +167,7 @@
 			files = (
 				B6D0F940222759C300B3C38A /* UntisApi.framework in Frameworks */,
 				B6624DD72055D04800F636B8 /* NotificationCenter.framework in Frameworks */,
+				B690BC8980E9FE4547F43885 /* Pods_widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412E017CBF58AED7DDDFC173 /* Pods_UntisApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D0F937222758BF00B3C38A /* UntisApi.framework in Frameworks */,
+				C08904202EC7B7E13F172101 /* Pods_timetable_iphone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +231,10 @@
 				B6D585722055CB3000BD06A8 /* NotificationCenter.framework */,
 				A3E2EAA0251E63C800A4FF4C /* WidgetKit.framework */,
 				A3E2EAA2251E63C800A4FF4C /* SwiftUI.framework */,
+				8EE14F74C382037DE2584D27 /* Pods_UntisApi.framework */,
+				FC06236FFB67177FC5E34938 /* Pods_timetable_iphone.framework */,
+				58CC308B00DBB7CA5DC03092 /* Pods_widget.framework */,
+				E143AA36F4DBD914CE2A32D4 /* Pods_widget14Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,6 +249,7 @@
 				A3E2EAA4251E63C800A4FF4C /* widget14 */,
 				B6D585712055CB3000BD06A8 /* Frameworks */,
 				B6EE0426203347AB009ABB82 /* Products */,
+				F6D9394F468C0597E4C41996 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,8 +279,24 @@
 				B6EE0434203347AB009ABB82 /* LaunchScreen.storyboard */,
 				B6EE0437203347AB009ABB82 /* Info.plist */,
 				B6EE042F203347AB009ABB82 /* timetable_iphone.xcdatamodeld */,
+				A31757402521E94A00C83611 /* GoogleService-Info.plist */,
 			);
 			path = "timetable-iphone";
+			sourceTree = "<group>";
+		};
+		F6D9394F468C0597E4C41996 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73127D2B5B80877181DE0F6B /* Pods-UntisApi.debug.xcconfig */,
+				9C176175F6500E4F741C5A9E /* Pods-UntisApi.release.xcconfig */,
+				45C54EB3B99634ABD9BEA41A /* Pods-timetable-iphone.debug.xcconfig */,
+				881C4B848A7EB8F9F5723886 /* Pods-timetable-iphone.release.xcconfig */,
+				B5641A37EEC2521CEA9312CC /* Pods-widget.debug.xcconfig */,
+				8D9EEC84AFDA2CE43D3874CB /* Pods-widget.release.xcconfig */,
+				AFD1798C16D5AE0442685434 /* Pods-widget14Extension.debug.xcconfig */,
+				342B26762B1D123E0BB164BE /* Pods-widget14Extension.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3E2EAB2251E63CA00A4FF4C /* Build configuration list for PBXNativeTarget "widget14Extension" */;
 			buildPhases = (
+				EA8D03FA89F120EFEB5D2BB9 /* [CP] Check Pods Manifest.lock */,
 				A3E2EA9B251E63C800A4FF4C /* Sources */,
 				A3E2EA9C251E63C800A4FF4C /* Frameworks */,
 				A3E2EA9D251E63C800A4FF4C /* Resources */,
@@ -292,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6624DE22055D04800F636B8 /* Build configuration list for PBXNativeTarget "widget" */;
 			buildPhases = (
+				A20D0970CE6378931A90EEEF /* [CP] Check Pods Manifest.lock */,
 				B6624DD22055D04800F636B8 /* Sources */,
 				B6624DD32055D04800F636B8 /* Frameworks */,
 				B6624DD42055D04800F636B8 /* Resources */,
@@ -309,6 +354,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6D0F939222758BF00B3C38A /* Build configuration list for PBXNativeTarget "UntisApi" */;
 			buildPhases = (
+				E81025C259870451D3DD207C /* [CP] Check Pods Manifest.lock */,
 				B6D0F92B222758BF00B3C38A /* Headers */,
 				B6D0F92C222758BF00B3C38A /* Sources */,
 				B6D0F92D222758BF00B3C38A /* Frameworks */,
@@ -327,11 +373,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6EE043A203347AB009ABB82 /* Build configuration list for PBXNativeTarget "timetable-iphone" */;
 			buildPhases = (
+				A2E6B79B1A00E1312B68CDCF /* [CP] Check Pods Manifest.lock */,
 				B6EE0421203347AB009ABB82 /* Sources */,
 				B6EE0422203347AB009ABB82 /* Frameworks */,
 				B6EE0423203347AB009ABB82 /* Resources */,
 				B6D585812055CB3100BD06A8 /* Embed App Extensions */,
 				B6D0F93C222758BF00B3C38A /* Embed Frameworks */,
+				BCD74AFC50FB733DCD74DA05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,12 +483,124 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6EE0436203347AB009ABB82 /* LaunchScreen.storyboard in Resources */,
+				A31757412521E94A00C83611 /* GoogleService-Info.plist in Resources */,
 				B6EE0433203347AB009ABB82 /* Assets.xcassets in Resources */,
 				B6CC2AF6223817E200D2EC77 /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A20D0970CE6378931A90EEEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-widget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E6B79B1A00E1312B68CDCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timetable-iphone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCD74AFC50FB733DCD74DA05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-timetable-iphone/Pods-timetable-iphone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-timetable-iphone/Pods-timetable-iphone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E81025C259870451D3DD207C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UntisApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA8D03FA89F120EFEB5D2BB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-widget14Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3E2EA9B251E63C800A4FF4C /* Sources */ = {
@@ -532,6 +692,7 @@
 /* Begin XCBuildConfiguration section */
 		A3E2EAB0251E63CA00A4FF4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFD1798C16D5AE0442685434 /* Pods-widget14Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -539,12 +700,12 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_ENTITLEMENTS = widget14Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = widget14/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone.widget14";
@@ -557,6 +718,7 @@
 		};
 		A3E2EAB1251E63CA00A4FF4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 342B26762B1D123E0BB164BE /* Pods-widget14Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -564,12 +726,12 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_ENTITLEMENTS = widget14Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = widget14/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone.widget14";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,16 +743,17 @@
 		};
 		B6624DE32055D04800F636B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5641A37EEC2521CEA9312CC /* Pods-widget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -602,16 +765,17 @@
 		};
 		B6624DE42055D04800F636B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D9EEC84AFDA2CE43D3874CB /* Pods-widget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = widget/widget.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = widget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone.widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -623,12 +787,13 @@
 		};
 		B6D0F93A222758BF00B3C38A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73127D2B5B80877181DE0F6B /* Pods-UntisApi.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -638,7 +803,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.finnweiler.UntisApi;
@@ -653,12 +818,13 @@
 		};
 		B6D0F93B222758BF00B3C38A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C176175F6500E4F741C5A9E /* Pods-UntisApi.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -668,7 +834,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.finnweiler.UntisApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -793,17 +959,18 @@
 		};
 		B6EE043B203347AB009ABB82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C54EB3B99634ABD9BEA41A /* Pods-timetable-iphone.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "timetable-iphone/timetable-iphone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = "timetable-iphone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -813,17 +980,18 @@
 		};
 		B6EE043C203347AB009ABB82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881C4B848A7EB8F9F5723886 /* Pods-timetable-iphone.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "timetable-iphone/timetable-iphone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTU24ZP7EY;
 				INFOPLIST_FILE = "timetable-iphone/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.finnweiler.timetable-iphone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
