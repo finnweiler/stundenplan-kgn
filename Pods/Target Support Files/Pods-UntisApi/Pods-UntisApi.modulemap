@@ -1,0 +1,6 @@
+framework module Pods_UntisApi {
+  umbrella header "Pods-UntisApi-umbrella.h"
+
+  export *
+  module * { export * }
+}

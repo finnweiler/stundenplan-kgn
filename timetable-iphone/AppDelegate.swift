@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        /*
         if let defaults = UserDefaults(suiteName: "group.com.finnweiler.shared") {
             let version = defaults.string(forKey: "appVersion")
             if version != "2.0" {
@@ -31,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 defaults.setValue(7387961, forKey: "colorExam")
                 defaults.synchronize()
             }
-        }
+        }*/
         
         
         window = UIWindow(frame: UIScreen.main.bounds)

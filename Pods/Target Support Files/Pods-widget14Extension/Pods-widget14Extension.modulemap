@@ -1,0 +1,6 @@
+framework module Pods_widget14Extension {
+  umbrella header "Pods-widget14Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}
