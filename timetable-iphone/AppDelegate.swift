@@ -21,10 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        /*
         if let defaults = UserDefaults(suiteName: "group.com.finnweiler.shared") {
-            let version = defaults.string(forKey: "appVersion")
-            if version != "2.0" {
+            let exam = defaults.integer(forKey: "colorExam")
+            let cancel = defaults.integer(forKey: "colorCancel")
+            let lightBg = defaults.integer(forKey: "colorLightBg")
+            let darkBg = defaults.integer(forKey: "colorDarkBg")
+            if exam == 0 && cancel == 0 && lightBg == 0 && darkBg == 0 {
                 defaults.setValue("2.0", forKey: "appVersion")
                 defaults.setValue(0x080808, forKey: "colorDarkBg")
                 defaults.setValue(0xFEFEFE, forKey: "colorLightBg")
@@ -32,8 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 defaults.setValue(7387961, forKey: "colorExam")
                 defaults.synchronize()
             }
-        }*/
-        
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: HomeController())
